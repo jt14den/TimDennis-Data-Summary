@@ -3,19 +3,35 @@
 \usepackage[
 backend=biber,
 style=mla,
-citestyle=authoryear
+citestyle=authortitle,
+showmedium=false
 ]{biblatex}
 \usepackage{enumitem}
+\usepackage[no-math]{fontspec}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{fouriernc}
 \addbibresource{2019-review.bib}
+\usepackage{enumitem}
 
+% \setmainfont[Scale=0.93]{TeX Gyre Schola}
+\setmainfont{TeX Gyre Schola}
+
+\setlist{noitemsep}
 \geometry{tmargin=1in, bmargin= 1in, lmargin=1in, rmargin = 1in}
+
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\small\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
 
 \pagestyle{fancy}
 \fancyhf{}
 %\rhead{Overleaf}
-\lhead{Data Summary}
+\rhead{Data Summary}
 \lfoot{Tim Dennis \\ Data Summary \\ January 1, 2017 - December 31, 2019}
 \rfoot{\thepage\ of \pageref{LastPage}}
 
@@ -24,8 +40,8 @@ citestyle=authoryear
 \renewcommand{\thesubsubsection}{\arabic{subsubsection})}
 
 \title{Data Summary}
-%\author{[Full Name]}
-%\date{Academic Year 2019-2020}
+\author{Tim Dennis}
+\date{Academic Year 2019-2020}
 
 \begin{document}
 
