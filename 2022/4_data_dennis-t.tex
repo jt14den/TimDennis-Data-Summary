@@ -17,6 +17,9 @@ citestyle=apa,
 \usepackage{fouriernc}
 \addbibresource{2019-review.bib}
 \usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usepackage[colorinlistoftodos]{todonotes}
 
 % \setmainfont[Scale=0.93]{TeX Gyre Schola}
 \setmainfont{TeX Gyre Schola}
@@ -43,12 +46,17 @@ citestyle=apa,
 \titleformat*{\subparagraph}{\large\bfseries}
 
 \pagestyle{fancy}
+
+\newcommand{\headerpic}[1]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node [anchor=south west,inner sep=0] at (current page header area.north west) 
+    {\includegraphics[height=1.2cm]{#1}}; 
+  \end{tikzpicture}
+}
+
 \fancyhf{}
-%\rhead{Overleaf}
-%\setlength\headheight{26pt}
-%\lhead{\includegraphics[width=109pt]{Uxd_Mx_A_Library.png}}
-%\rhead{Data Summary}
-\lfoot{\fontsize{8pt}{10pt}\selectfont Tim Dennis \\ Data Summary \\ April 17, 2017 - December 31, 2019}
+\fancyhead[L]{\headerpic{Uxd_Mx_A_Library}}
+\lfoot{\fontsize{8pt}{10pt}\selectfont Tim Dennis \\ Data Summary \\ January 1, 2020 - December 31, 2022}
 \rfoot{\fontsize{8pt}{10pt}\selectfont\thepage\ of \pageref{LastPage}}
 
 \renewcommand{\thesection}{\Roman{section}}
@@ -59,7 +67,7 @@ citestyle=apa,
 
 \author{Tim Dennis \\ Data Summary}
 
-\date{April 2017 -- December 2019}
+\date{January 2020 -- December 2022}
 
 \begin{document}
 
